@@ -1,5 +1,9 @@
 "use client";
 
+import { DM_Sans } from "next/font/google";
+
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
+
 import { useEffect, useState } from "react";
 import fintechRevenueData  from "../data/fintechRevenue"; // Import revenue models
 
@@ -20,8 +24,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-6">
-      <h1 className="text-4xl font-bold mb-6">Crypto Revenue Simulator</h1>
+    <div className={`min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-6 ${dmSans.className}`}>
+    <h1 className="text-4xl font-bold mb-6">Crypto Revenue Simulator</h1>
 
       {/* Crypto Prices Section */}
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center w-96">
